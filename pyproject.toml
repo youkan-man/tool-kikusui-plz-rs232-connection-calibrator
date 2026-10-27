@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kikusui-plz-rs232-diag"
+version = "0.1.0"
+description = "Read-only Linux diagnostics for KIKUSUI PLZ-U RS232 connections"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+plz-rs232-diag = "plz_rs232_diag.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["plz_rs232_diag*"]
+
